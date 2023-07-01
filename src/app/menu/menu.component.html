@@ -1,0 +1,13 @@
+<header>
+    <nav class="navbar navvar-expand-md navbar-dark bg-dark">
+        <ol class="navbar-nav">
+            <li><a routerLink="home" class="nav-link">Home</a></li>
+            <li><a *ngIf="defaultAuthService.isUserLoggedIn()" routerLink="welcome/:name" class="nav-link">Welcome</a></li>
+            <li><a *ngIf="defaultAuthService.isUserLoggedIn()" routerLink="todo" class="nav-link">Todos</a></li>
+        </ol>
+        <ol class="navbar-nav justify-content-end">
+            <li><a *ngIf="!defaultAuthService.isUserLoggedIn()" routerLink="loggin">Sign in</a></li>
+            <li><a *ngIf="defaultAuthService.isUserLoggedIn()" routerLink="logout">Sign out</a></li>
+        </ol>
+    </nav>
+</header>

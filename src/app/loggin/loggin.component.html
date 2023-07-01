@@ -1,0 +1,4 @@
+<p>loggin works!</p>
+<div><label>username: </label><input type="text" name="username" [(ngModel)]="username"> <span ngClass="error" *ngIf="invalidLogin">{{errorMessage}}</span></div>
+<div><label>password: </label> <input type="password" name="password" [(ngModel)]="password"></div>
+<div><button (click)="logInput()">enter</button></div>

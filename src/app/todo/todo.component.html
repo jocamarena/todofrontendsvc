@@ -1,0 +1,14 @@
+<p>todo works!</p>
+<table>
+    <caption>my table</caption>
+    <tr>
+    <th>id</th>
+    <th>desc</th>
+    <th>date</th>
+    </tr>
+    <tr *ngFor="let todo of todos">
+        <td>{{todo.id}}</td>
+        <td>{{todo.desc | uppercase}}</td>
+        <td>{{todo.date | date | uppercase}}</td>
+    </tr>
+</table>
